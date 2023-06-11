@@ -1,0 +1,20 @@
+ALGORITHM sentenceTest
+VAR
+    str = "The boat was like a pea floating in a great bowl of blue soup.";
+    charCount : INTEGER := 0;
+    wordCount : INTEGER := 0;
+    vowelCount: INTEGER := 0;
+    vowels := [a,e,i,o,u,A,E,I,O,U];
+BEGIN
+    Read (str);
+    FOR i FROM 0 TO str.length STEP i++ DO
+        IF (str[i]===' ') THEN
+            wordCount +=1
+        ELSE_IF (vowels.includes(str[i])) THEN
+            vowelCount +=1
+        END_IF
+        charCount +=1
+    END_FOR
+    Print(charCount, wordCount, vowelCount)
+
+END
